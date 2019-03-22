@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CanvasFirstTry</title>
+</head>
+<body>
+<canvas id="canvas" width="400" height="400"></canvas>
+<script>
+    var canvas = document.getElementById("canvas");
+    var ctx = canvas.getContext("2d");
+
+    ctx.strokeStyle = "Black";
+    ctx.fillStyle = "Green";
+// 1 door
+    ctx.fillRect(20,20,60,100);
+    ctx.strokeRect(20,20,60,100);
+// 2 door
+    ctx.fillRect(130,20,60,100);
+    ctx.strokeRect(130,20,60,100);
+// 3 door
+    ctx.fillRect(240,20,60,100);
+    ctx.strokeRect(240,20,60,100);
+// hinges for doors
+    ctx.fillStyle = "Black";
+    ctx.fillRect(75,30,10,20);
+    ctx.fillRect(75,90,10,20)
+      ctx.fillRect(185,30,10,20);
+      ctx.fillRect(185,90,10,20);
+       ctx.fillRect(295,30,10,20);
+       ctx.fillRect(295,90,10,20);
+// handls for doors
+    ctx.fillRect(30,70,10,5);
+    ctx.fillRect(140,70,10,5);
+    ctx.fillRect(250,70,10,5);
+// arrows to the doors
+    ctx.lineWidth = 2;
+    ctx.strokeStyle = "SkyBlue";
+    ctx.beginPath();
+    ctx.moveTo(160,260);
+    ctx.lineTo(50,121);
+    ctx.stroke();
+    ctx.moveTo(160,260);
+    ctx.lineTo(160,121);
+    ctx.stroke();
+    ctx.moveTo(160,260);
+    ctx.lineTo(270,121);
+    ctx.stroke();
+    ctx.moveTo(160,260);
+    ctx.lineTo(160,400);
+    ctx.stroke();
+// Green circle - Start Point
+    ctx.strokeStyle = "Green";
+    ctx.fillStyle = "Green";
+    ctx.beginPath();
+    ctx.arc(160,260,25,0,6.28,false);
+    ctx.stroke();
+    ctx.fill();
+</script>
+</body>
+</html>
